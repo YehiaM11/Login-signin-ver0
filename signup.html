@@ -17,12 +17,12 @@
                             <form name="myform" >
                                 <hr>
                                 <br><br>                   
-                                <input class="fnam" type="text" id="fname" name="fname" placeholder="First name">
-                                <input class="snam" type="text" id="lname" name="lname" placeholder="Last name">
+                                <input class="fnam" type="text" id="fname" name="fname" placeholder="First name" required>
+                                <input class="snam" type="text" id="lname" name="lname" placeholder="Last name" required>
                                 <br><br>
-                                <input class="mlpswrd"type="email" id="email" name="email" placeholder=" Email address">                                
+                                <input class="mlpswrd"type="email" id="email" name="email" placeholder=" Email address" required>                                
                                 <br><br>
-                                <input class="mlpswrd"type="password" id="password" name="password" placeholder="password" onclick="onButtonClickshow()">                                
+                                <input class="mlpswrd"type="password" id="password" name="password" placeholder="password" onclick="onButtonClickshow()" required>                                
                                 <br><br>
                                          <div id ="output" class="hidden">
                                             <pre>
@@ -36,7 +36,7 @@
                                             </div>
                                 <br><br><br>
 
-                                <button value="register" onclick="onButtonClickvalid()"class="btton"type="button"style= "width:100px;height: 50px;"  >Next</button>
+                                <button name="NextButton" value="register" onclick="onButtonClickvalid()"class="btton"type="button"style= "width:100px;height: 50px;"  >Next</button>
 
                                 
                             </form> 
