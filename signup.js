@@ -14,8 +14,6 @@ function onButtonClickshow(){
     var y=document.getElementById('password').value;
     var z=document.getElementById('fname').value;
     var k=document.getElementById('lname').value;
-
-
     for(i=0;i<x.length;i++)
     {
       if(x[i]=="@")
@@ -23,9 +21,10 @@ function onButtonClickshow(){
           mailflg++;
       }
     }
-    if ( x[x.length -1]!="m" &&x[x.length -2]!="o"&&x[x.length -3]!="c" &&x[x.length -4]!="." || flga==0)
+    if ( x[x.length -1]!="m" &&x[x.length -2]!="o"&&x[x.length -3]!="c" &&x[x.length -4]!="." || mailflg==0)
     {
         alert("please enter valid mail ")
+        return false;
     }
     for(i=0;i<z.length;i++)
     {
@@ -49,7 +48,6 @@ function onButtonClickshow(){
         lnameflg=-11111;
       }
     }
-
     for(i=0;i<y.length;i++)
     {
                   if(y[i]=="!" ||y[i]=="@" ||y[i]=="#" ||y[i]=="$" ||y[i]=="%" ||y[i]=="^" ||y[i]=="&" ||
@@ -60,7 +58,6 @@ function onButtonClickshow(){
                     pswrdsymbol++;
                   } 
     }
-
     for(i=0;i<y.length;i++)
     {
                   if(y[i]=="1" ||y[i]=="2" ||y[i]=="3" ||y[i]=="4" ||y[i]=="5" 
@@ -69,8 +66,6 @@ function onButtonClickshow(){
                     pswrdnmbr++;
                   } 
     }
-
-    
     for(i=0;i<y.length;i++)
     {
                   if(y[i]=="q" ||y[i]=="w" ||y[i]=="e" ||y[i]=="r" ||y[i]=="t" 
@@ -95,32 +90,39 @@ function onButtonClickshow(){
                     pswrdhc++;
                   } 
     }
-    if(y.length!=12)
+    if(y.length<12)
     {
       alert("Your password must have At least 12 characters")
+      return false;
     }
     if(pswrdhc==0)
     {
       alert("Your password must have 1 higher case letter")
+      return false;
     }
     if(pswrdlc==0)
     {
       alert("Your password must have 1 lowercase letter")
+      return false;
     }
     if(pswrdsymbol==0)
     {
       alert("password must have 1 symbol")
+      return false;
     }
     if(pswrdnmbr==0)
     {
       alert("password must have 1 number")
+      return false;
     }
     if(fnameflg==-1)
     {
       alert("please write proper first name ")
+      return false;
     }
     if(lnameflg==-11111)
     {
       alert("please write proper last name ")
+      return false;
     }
   }                 
